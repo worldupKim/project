@@ -5,6 +5,16 @@
   padding: 0;
 }
 
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
 body {
   background-position: 0 0;
   background-size: cover;
@@ -25,9 +35,21 @@ body {
   background: linear-gradient(-45deg, #fff, #e73c7e, #fff, #23a6d5, #fff);
   background-size: 400% 400%;
   animation: gradient 5s ease infinite;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 50px;
+}
+
+#weather {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+}
+
+#quote {
+  margin-top: 20px;
+  text-align: center;
 }
 
 @keyframes gradient {
@@ -68,13 +90,65 @@ body {
 .btn {
   width: 200px;
   height: 50px;
-  background-color: transparent;
   background-size: 400% 400%;
   border: 2px solid #fff;
   border-radius: 5px;
   font-size: 20px;
   color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .todo-box {
+  margin-top: 20px;
+}
+
+.todo-box input {
+  width: 705px;
+  height: 50px;
+  border-radius: 5px;
+  padding: 0 20px;
+  outline: none;
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-size: 20px;
+}
+
+.todo-box input::placeholder {
+  color: #fff;
+}
+
+.todo-list {
+  width: 705px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.todo-list li {
+  position: relative;
+  padding: 0 100px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid #fff;
+}
+
+.todo-list span {
+  vertical-align: middle;
+}
+
+.todo-list button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 50px;
+  margin-left: 10px;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.todo-list button:active {
+  background-color: #fff;
+  color: #000;
 }
